@@ -5,7 +5,7 @@
   $repeat = getenv("REPEAT") ? getenv("REPEAT") : 50;
 
   $web_driver = RemoteWebDriver::create(
-    "http://".getenv("BROWSERSTACK_USER").":".getenv("BROWSERSTACK_ACCESS_KEY")."@hub.browserstack.com/wd/hub", 
+    "https://".getenv("BROWSERSTACK_USER").":".getenv("BROWSERSTACK_ACCESS_KEY")."@hub.browserstack.com/wd/hub", 
     array(
       "browserName" => "chrome",
       "build" => "PHP https vs http",
