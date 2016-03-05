@@ -1,6 +1,6 @@
 task :default => :test
 
 task :test do
-  system "ruby http.rb"
-  system "ruby https.rb"
+  system "ruby sample-http.rb"
+  system "ruby sample-https.rb"
 end
