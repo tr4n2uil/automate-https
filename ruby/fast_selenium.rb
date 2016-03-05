@@ -1,5 +1,3 @@
-# gem install curb
-
 require 'selenium/webdriver/remote/http/curb'
 
 module Selenium

@@ -12,7 +12,7 @@ caps["name"] = "http"
 caps["build"] = "Ruby https vs http"
 
 driver = Selenium::WebDriver.for(:remote,
-  :url => "http://vibhajrajan1:isx1GLKoDPyxvJwMZBso@hub.browserstack.com/wd/hub",
+  :url => "http://#{ENV["BROWSERSTACK_USER"]}:#{ENV["BROWSERSTACK_ACCESS_KEY"]}@hub.browserstack.com/wd/hub",
   :desired_capabilities => caps)
 driver.navigate.to "http://www.google.com"
 element = driver.find_element(:name, 'q')
@@ -32,7 +32,7 @@ caps["name"] = "https"
 caps["build"] = "Ruby https vs http"
 
 driver = Selenium::WebDriver.for(:remote,
-  :url => "https://vibhajrajan1:isx1GLKoDPyxvJwMZBso@hub.browserstack.com/wd/hub",
+  :url => "https://#{ENV["BROWSERSTACK_USER"]}:#{ENV["BROWSERSTACK_ACCESS_KEY"]}@hub.browserstack.com/wd/hub",
   :desired_capabilities => caps)
 driver.navigate.to "http://www.google.com"
 element = driver.find_element(:name, 'q')
