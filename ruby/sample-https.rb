@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-require './fast_selenium'
+require './fast-selenium'
 
 @repeat = ENV['REPEAT'] || 50
 
