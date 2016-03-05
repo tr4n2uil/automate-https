@@ -1,0 +1,17 @@
+{
+  "name": "automate-https",
+  "description": "Enable HTTPS in BrowserStack Automate",
+  "keywords": ["webdriver", "selenium", "php", "https"],
+  "homepage": "https://github.com/tr4n2uil/automate-https",
+  "type": "samples",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/tr4n2uil/automate-https/issues",
+    "source": "https://github.com/tr4n2uil/automate-https"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.19",
+    "facebook/webdriver": "dev-master"
+  }
+}

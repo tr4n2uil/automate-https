@@ -1,2 +1,5 @@
 **.pyc
-**/node_modules
+node/node_modules
+php/composer.phar
+php/vendor
+
