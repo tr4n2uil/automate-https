@@ -1,7 +1,6 @@
-require "rake/testtask"
-
 task :default => :test
 
 task :test do
-  system "ruby ruby.rb"
+  system "ruby http.rb"
+  system "ruby https.rb"
 end
