@@ -1,0 +1,4 @@
+
+on run => sub {
+  requires 'Selenium::Remote::Driver';
+};
