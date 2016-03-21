@@ -1,6 +1,9 @@
+csharp/.vs/
+csharp/packages/
+csharp/BrowserStackTests/bin
+csharp/BrowserStackTests/obj
 **.pyc
 node/node_modules
 php/composer.phar
 php/vendor
 java/target
-
