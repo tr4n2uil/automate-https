@@ -32,7 +32,7 @@ class BsRemoteConnection(RemoteConnection):
     self.hostname = parsed_url.hostname
     if parsed_url.hostname:
       try:
-        netloc = parsed_url.hostname
+        netloc = socket.gethostbyname(parsed_url.hostname)
         addr = netloc
         if parsed_url.port:
           netloc += ':%d' % parsed_url.port
