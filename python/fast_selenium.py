@@ -29,9 +29,10 @@ class BsRemoteConnection(RemoteConnection):
     self.keep_alive = keep_alive
     parsed_url = parse.urlparse(remote_server_addr)
     addr = ""
+    self.hostname = parsed_url.hostname
     if parsed_url.hostname:
       try:
-        netloc = socket.gethostbyname(parsed_url.hostname)
+        netloc = parsed_url.hostname
         addr = netloc
         if parsed_url.port:
           netloc += ':%d' % parsed_url.port
@@ -76,6 +77,8 @@ class BsRemoteConnection(RemoteConnection):
     headers["User-Agent"] = "Python http auth"
     headers["Content-type"] = "text/html;charset=\"UTF-8\""
     headers["Connection"] = "keep-alive"
+    if self.hostname:
+      headers["Host"] = self.hostname
 
     # for basic auth
     if parsed_url.username:
